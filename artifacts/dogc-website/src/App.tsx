@@ -473,15 +473,10 @@ export default function App() {
                     alt="Cool Doge"
                     className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
                   />
-                  <div className="hidden md:flex flex-col gap-4">
+                  <div className="hidden md:block">
                     <img
                       src="/assets/dogc-coin.png"
                       alt="DOGC Coin"
-                      className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
-                    />
-                    <img
-                      src="/assets/doge-sun.jpg"
-                      alt="Doge Sun"
                       className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
                     />
                   </div>
