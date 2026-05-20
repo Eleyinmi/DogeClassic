@@ -147,7 +147,7 @@ function Reveal({ children, delay = 0, direction = "up" }: {
 }
 
 /* ─── Animated Counter ─── */
-function AnimatedCount({ to, label, suffix = "" }: { to: string; label: string; suffix?: string }) {
+function AnimatedCount({ to, label, suffix = "", nowrap = false }: { to: string; label: string; suffix?: string; nowrap?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
   return (
@@ -159,7 +159,7 @@ function AnimatedCount({ to, label, suffix = "" }: { to: string; label: string; 
       className="bg-card/80 p-6 border-2 border-primary rounded-lg flex flex-col items-center justify-center hover:box-shadow-gold transition-all"
     >
       <span className="font-comic text-lg text-gray-400 mb-2">{label}</span>
-      <span className="font-pixel text-xl md:text-2xl text-secondary">{to}{suffix}</span>
+      <span className={`font-pixel text-xl md:text-2xl text-secondary${nowrap ? " whitespace-nowrap" : ""}`}>{to}{suffix}</span>
     </motion.div>
   );
 }
@@ -433,7 +433,7 @@ export default function App() {
               <AnimatedCount to="$DOGC" label="Ticker" />
               <AnimatedCount to="Ethereum" label="Chain" />
               <AnimatedCount to="BURNED 🔥" label="LP" />
-              <AnimatedCount to="0% / 0%" label="Tax" />
+              <AnimatedCount to="0% / 0%" label="Tax" nowrap />
             </div>
 
             <Reveal delay={0.3}>
@@ -465,18 +465,16 @@ export default function App() {
               </h2>
             </Reveal>
 
-            <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
               <Reveal direction="left" delay={0.1}>
-                <div className="md:w-1/3">
-                  <img
-                    src="/assets/doge-sunglasses.jpg"
-                    alt="Cool Doge"
-                    className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
-                  />
-                </div>
+                <img
+                  src="/assets/doge-sunglasses.jpg"
+                  alt="Cool Doge"
+                  className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
+                />
               </Reveal>
 
-              <div className="md:w-2/3 space-y-5">
+              <div className="space-y-5">
                 {[
                   {
                     n: "1", title: "Get ETH",
@@ -498,14 +496,14 @@ export default function App() {
                   <Reveal key={step.n} delay={i * 0.12}>
                     <div className="bg-card p-6 border-l-4 border-primary flex gap-4 items-start hover:box-shadow-gold transition-all duration-300 group">
                       <div className="font-pixel text-3xl text-secondary shrink-0 group-hover:scale-110 transition-transform">{step.n}</div>
-                      <div className="w-full">
+                      <div className="w-full min-w-0">
                         <h4 className="font-pixel text-lg text-primary mb-2">{step.title}</h4>
                         {step.body ? (
                           <p className="font-comic text-lg text-gray-300">{step.body}</p>
                         ) : (
-                          <div className="bg-background p-3 rounded font-pixel text-xs text-secondary break-all flex justify-between items-center">
-                            <span data-testid="text-howtobuy-ca">{CONTRACT_ADDRESS}</span>
-                            <Button variant="ghost" size="icon" onClick={handleCopyHtb} className="text-primary hover:text-secondary shrink-0 ml-2" data-testid="button-howtobuy-copy">
+                          <div className="bg-background p-3 rounded font-pixel text-xs text-secondary flex justify-between items-center gap-2">
+                            <span className="break-all min-w-0" data-testid="text-howtobuy-ca">{CONTRACT_ADDRESS}</span>
+                            <Button variant="ghost" size="icon" onClick={handleCopyHtb} className="text-primary hover:text-secondary shrink-0" data-testid="button-howtobuy-copy">
                               {copiedHtb ? "✓" : <Copy className="w-4 h-4" />}
                             </Button>
                           </div>
