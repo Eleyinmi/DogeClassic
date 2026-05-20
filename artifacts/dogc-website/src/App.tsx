@@ -551,12 +551,12 @@ export default function App() {
 
           <Reveal delay={0.15}>
             <div className="flex flex-wrap justify-center gap-6 mb-16">
-              <a href="https://x.com/your_handle" target="_blank" rel="noopener noreferrer" data-testid="link-footer-x">
+              <a href="https://x.com/Dogeclassicto" target="_blank" rel="noopener noreferrer" data-testid="link-footer-x">
                 <Button className="font-pixel bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground h-14 px-6 text-xs hover:box-shadow-gold transition-all" data-testid="button-footer-x">
                   🐦 Follow on X <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" data-testid="link-footer-tg">
+              <a href="https://t.me/dogeclassicto" target="_blank" rel="noopener noreferrer" data-testid="link-footer-tg">
                 <Button className="font-pixel bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground h-14 px-6 text-xs hover:box-shadow-gold transition-all" data-testid="button-footer-tg">
                   💬 Join Telegram <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
