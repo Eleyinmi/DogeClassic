@@ -1,0 +1,128 @@
+Build a single-page website for ÐOGE CLASSIC ($DOGC) — a community-driven memecoin on Ethereum. Use HTML, CSS, and vanilla JS in a single index.html file. No frameworks needed.
+
+DESIGN SYSTEM
+
+Dark navy/dark background (#0a0a1a or similar deep dark)
+Primary accent: gold/yellow (#f5c842, #d4a017)
+Secondary accent: bright yellow (#ffe135)
+Font: Import "Press Start 2P" from Google Fonts for headings (retro pixel feel), and "Comic Neue" for body text (fun, approachable)
+Starburst / sunburst decorative elements in CSS (pure CSS, no images needed)
+Doge meme phrases scattered as decorative text: "such wow," "much coin," "very crypto," "wow," "many gainz" — rendered in Comic Sans or Comic Neue, scattered at slight angles in muted gold
+Pixel-art borders or dotted/dashed gold borders on cards
+
+
+SECTIONS TO BUILD
+1. NAVIGATION BAR
+
+Logo text: ÐOGC CLASSIC styled in gold "Press Start 2P" font
+Nav links: Home | About | Tokenomics | How to Buy | Community
+Sticky top, dark background with a gold bottom border
+A blinking gold "BUY NOW" button on the right linking to: https://app.uniswap.org/swap?outputCurrency=0x20130bc88cb8dae42a7a987b1377a97471e1ae9a&chain=ethereum
+
+2. HERO SECTION
+
+Full-width, dark background with a large CSS starburst effect behind the main image
+Centered layout with this headline (Press Start 2P font, gold):
+
+ÐOGE CLASSIC
+$DOGC
+SUCH REVIVAL. MUCH OG.
+
+
+Subheadline (Comic Neue): "The original Dogecoin spirit is back. Community-owned. LP burned. Since 2013."
+Two CTA buttons side by side:
+
+🟡 BUY $DOGC → https://app.uniswap.org/swap?outputCurrency=0x20130bc88cb8dae42a7a987b1377a97471e1ae9a&chain=ethereum
+📊 CHART → https://dexscreener.com/ethereum/0xfbd9803a10f5a311eb00daadd84c3d5bb1f5f431
+
+
+Below buttons: contract address displayed in a gold pill/badge:
+CA: 0x20130bc88cb8dae42a7a987b1377a97471e1ae9a
+with a small copy-to-clipboard button next to it
+Scattered doge phrases around this section at random positions/angles
+
+3. ABOUT / MANIFESTO SECTION
+
+Section title: SUCH HISTORY. VERY OG.
+Two-column layout (stacks on mobile):
+
+Left: A large golden coin placeholder div (circular, gold background, ÐOGC text centered — styled in CSS, no image needed) with rotating CSS animation (slow spin)
+Right: Paragraph text (Comic Neue, white/light):
+
+"ÐOGE CLASSIC is a community takeover of the original Dogecoin spirit — back to December 2013. Before the sells. Before the noise. Just OGs, holding, believing. Being OG isn't everyone's cup of tea. You gotta be resilient. This is for the holders, the believers, the ones who never left."
+
+
+
+
+Below: 3 feature cards in a row with gold icon, bold title, and short description:
+
+🔥 LP BURNED — "Liquidity locked forever. Rug-proof. Community owns this."
+👥 COMMUNITY TAKEOVER — "No dev wallet. No presale. Pure community."
+⚡ ETHEREUM CHAIN — "Live on Uniswap V2. Buy directly on-chain."
+
+
+
+4. TOKENOMICS SECTION
+
+Dark background with gold accents
+Section title: WOW SUCH TOKENOMICS
+Display these stats in large gold number cards (grid of 4):
+
+Ticker: $DOGC
+Chain: Ethereum
+LP: BURNED 🔥
+Tax: 0% Buy / 0% Sell
+
+
+Below: Contract address again (copy button), and a link to Dexscreener
+
+5. HOW TO BUY SECTION
+
+Section title: HOW MUCH BUY. VERY EASY.
+4 numbered steps in a horizontal flow (arrows between them, stacks on mobile):
+
+Get ETH — "Buy ETH on any exchange and send to your wallet (MetaMask, Rabby, etc.)"
+Go to Uniswap — "Visit Uniswap V2 and connect your wallet"
+Paste CA — 0x20130bc88cb8dae42a7a987b1377a97471e1ae9a
+Swap & HODL — "Set slippage to 1-3%, swap ETH for $DOGC and join the OGs"
+
+
+Big gold BUY button linking to Uniswap
+
+6. COMMUNITY / FOOTER SECTION
+
+Section title: SUCH COMMUNITY. MANY FRENS.
+Two social link buttons:
+
+🐦 Follow on X → https://x.com/Dogcerc
+💬 Join Telegram → # (placeholder)
+
+
+Dexscreener link button
+Footer: © 2024 ÐOGE CLASSIC — $DOGC | Not financial advice. Much wow.
+
+
+ANIMATIONS & EFFECTS
+
+CSS keyframe: slow floating animation on the coin div (up/down bob)
+CSS keyframe: spinning/rotating coin
+CSS keyframe: blinking effect on the "BUY NOW" nav button
+On hover: gold glow effect on buttons (CSS box-shadow in gold)
+Smooth scroll for nav links
+Copy-to-clipboard JS for the contract address (show "COPIED! WOW" for 2 seconds)
+Scattered doge phrases (wow, such crypto, much moon, very gainz, plz rich) as absolute-positioned divs in the hero and about sections, rotated at slight angles, low opacity (~0.3), gold color
+
+
+RESPONSIVE
+
+Mobile-friendly: stacked layout on screens under 768px
+Navigation collapses to a hamburger menu on mobile
+All font sizes scale down appropriately
+
+
+IMPORTANT NOTES
+
+NO external image dependencies — use CSS-only coin, CSS starbursts, styled text for logo
+All links open in a new tab (target="_blank")
+Clean, commented code
+Self-contained single index.html file

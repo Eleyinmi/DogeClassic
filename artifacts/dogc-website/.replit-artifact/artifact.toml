@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "ÐOGE CLASSIC — $DOGC"
+version = "1.0.0"
+id = "artifacts/dogc-website"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24580
+
+[services.development]
+run = "pnpm --filter @workspace/dogc-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dogc-website", "run", "build" ]
+publicDir = "artifacts/dogc-website/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24580"
+BASE_PATH = "/"
