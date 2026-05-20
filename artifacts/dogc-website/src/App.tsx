@@ -551,7 +551,7 @@ export default function App() {
 
           <Reveal delay={0.15}>
             <div className="flex flex-wrap justify-center gap-6 mb-16">
-              <a href="https://x.com/Dogcerc" target="_blank" rel="noopener noreferrer" data-testid="link-footer-x">
+              <a href="https://x.com/your_handle" target="_blank" rel="noopener noreferrer" data-testid="link-footer-x">
                 <Button className="font-pixel bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground h-14 px-6 text-xs hover:box-shadow-gold transition-all" data-testid="button-footer-x">
                   🐦 Follow on X <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
@@ -570,7 +570,7 @@ export default function App() {
           </Reveal>
 
           <p className="font-comic text-lg text-gray-500">
-            © 2024 ÐOGE CLASSIC — $DOGC. Much wow.
+            © 2026 ÐOGE CLASSIC — $DOGC. Much wow.
           </p>
         </div>
       </footer>
