@@ -1,4 +1,7 @@
 {
+  "buildCommand": "cd ../.. && pnpm install --frozen-lockfile && pnpm --filter @workspace/dogc-website run build:vercel",
+  "outputDirectory": "dist/public",
+  "installCommand": "echo 'install handled in buildCommand'",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
