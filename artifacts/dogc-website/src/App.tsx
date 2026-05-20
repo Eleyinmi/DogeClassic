@@ -467,11 +467,25 @@ export default function App() {
 
             <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
               <Reveal direction="left" delay={0.1}>
-                <img
-                  src="/assets/doge-sunglasses.jpg"
-                  alt="Cool Doge"
-                  className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
-                />
+                <div className="flex flex-col gap-4">
+                  <img
+                    src="/assets/doge-sunglasses.jpg"
+                    alt="Cool Doge"
+                    className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
+                  />
+                  <div className="hidden md:flex flex-col gap-4">
+                    <img
+                      src="/assets/dogc-coin.png"
+                      alt="DOGC Coin"
+                      className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
+                    />
+                    <img
+                      src="/assets/doge-sun.jpg"
+                      alt="Doge Sun"
+                      className="w-full rounded-2xl border-4 border-primary box-shadow-gold"
+                    />
+                  </div>
+                </div>
               </Reveal>
 
               <div className="space-y-5">
